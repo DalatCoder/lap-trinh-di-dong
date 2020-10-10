@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="8"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp"
+        >
+
+        <EditText
+            android:id="@+id/txtNumber"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:hint="@string/textbox_hint"
+            android:inputType="numberDecimal"
+            android:layout_weight="1"
+            android:autofillHints="" />
+
+        <Spinner
+            android:id="@+id/spnUnit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:gravity="center_vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/usd"
+                    android:contentDescription="@string/usd_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/usd_unit"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+                <TextView
+                    android:id="@+id/lblUsd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:gravity="center_vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/eur"
+                    android:contentDescription="@string/eur_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eur_unit"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+                <TextView
+                    android:id="@+id/lblEur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:gravity="center_vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gbp"
+                    android:contentDescription="@string/gbp_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gbp_unit"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+                <TextView
+                    android:id="@+id/lblGbp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:gravity="center_vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/inr"
+                    android:contentDescription="@string/inr_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inr_unit"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+                <TextView
+                    android:id="@+id/lblInr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:gravity="center_vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/aud"
+                    android:contentDescription="@string/aud_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aud_unit"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+                <TextView
+                    android:id="@+id/lblAud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:gravity="center_vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cad"
+                    android:contentDescription="@string/cad_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cad_unit"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+                <TextView
+                    android:id="@+id/lblCad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:gravity="center_vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/zar"
+                    android:contentDescription="@string/zar_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zar_unit"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+                <TextView
+                    android:id="@+id/lblZar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:gravity="center_vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/nzd"
+                    android:contentDescription="@string/nzd_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nzd_unit"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+                <TextView
+                    android:id="@+id/lblNzd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:gravity="center_vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/jpy"
+                    android:contentDescription="@string/jpy_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jpy_unit"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+                <TextView
+                    android:id="@+id/lblJpy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:gravity="center_vertical"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vnd"
+                    android:contentDescription="@string/vnd_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vnd_unit"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+                <TextView
+                    android:id="@+id/lblVnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
