@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initControl() {
-        txtNumber = findViewById(R.id.txtNumber);
-        spnUnits = findViewById(R.id.spnUnit);
+        txtNumber = this.<EditText>findViewById(R.id.txtNumber);
+        spnUnits = this.<Spinner>findViewById(R.id.spnUnit);
         lblResults = new TextView[] {
                 findViewById(R.id.lblUsd),
                 findViewById(R.id.lblEur),
@@ -61,10 +61,10 @@ public class MainActivity extends AppCompatActivity {
         };
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                MainActivity.this, R.layout.activity_main, units
+                MainActivity.this, R.layout.support_simple_spinner_dropdown_item, units
         );
 
-        adapter.setDropDownViewResource(R.layout.activity_main);
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
 
         spnUnits.setAdapter(adapter);
 
