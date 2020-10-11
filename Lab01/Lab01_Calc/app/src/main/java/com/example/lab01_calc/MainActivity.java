@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception ex) {
             this.firstNumber = 0;
             this.secondNumber = 0;
-            Toast.makeText(getApplicationContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Please enter a valid number!", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 getNumbers();
                 if (secondNumber == 0) {
-                    Toast.makeText(getApplicationContext(), "Divide by 0 error!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Cannot divide by 0!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
