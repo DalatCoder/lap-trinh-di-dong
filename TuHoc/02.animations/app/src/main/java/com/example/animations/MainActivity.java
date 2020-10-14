@@ -26,9 +26,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void init() {
+        ImageView imageViewCat1 = (ImageView) findViewById(R.id.imageViewCat1);
+
+        imageViewCat1.animate().rotation(3600).scaleX(1).scaleY(1).alpha(1).setDuration(2000);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        init();
     }
 }
