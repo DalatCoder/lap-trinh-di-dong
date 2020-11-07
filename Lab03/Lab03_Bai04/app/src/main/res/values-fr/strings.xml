@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lab03_Bai04</string>
+    <string name="welcome">Accueil!</string>
+    <string name="email">Adresse e-mail</string>
+    <string name="password">Mot de pase</string>
+    <string name="login">Connexion</string>
+    <string name="do_not_have_account">Ne pas avoir un compte? Signer</string>
+</resources>

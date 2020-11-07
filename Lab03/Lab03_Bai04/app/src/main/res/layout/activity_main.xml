@@ -13,36 +13,41 @@
        android:weightSum="8"
        >
        <TextView
+           android:id="@+id/lblWelcome"
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="2"
-           android:text="Xin chào"
+           android:text="@string/welcome"
            android:gravity="center"
            android:textSize="25sp"
            />
        <EditText
+           android:id="@+id/txtEmail"
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="1"
-           android:hint="Email"
+           android:hint="@string/email"
            />
        <EditText
+           android:id="@+id/txtPassword"
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="1"
-           android:hint="Mật khẩu"
+           android:hint="@string/password"
            />
        <Button
+           android:id="@+id/btnLogin"
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="1"
-           android:text="Đăng nhập"
+           android:text="@string/login"
            />
        <TextView
+           android:id="@+id/lblDoNotHaveAccount"
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="1"
-           android:text="Không có tài khoản. Vui lòng đăng ký."
+           android:text="@string/do_not_have_account"
            android:gravity="center"
        />
        <LinearLayout
