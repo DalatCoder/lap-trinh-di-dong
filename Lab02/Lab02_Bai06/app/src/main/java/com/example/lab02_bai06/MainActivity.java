@@ -13,8 +13,8 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    TextView TxDiem;
-    Button imPlay;
+    TextView txtDiem;
+    Button btnPlay;
     CheckBox cb1, cb2, cb3;
     SeekBar sb1, sb2,sb3;
 
@@ -22,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Anhxa();
+
+        init();
 
         final CountDownTimer countDownTimer = new CountDownTimer(60000, 300)
         {
@@ -45,19 +46,18 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
-        imPlay.setOnClickListener(new View.OnClickListener() {
+        btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                imPlay.setVisibility(View.INVISIBLE);
+                btnPlay.setVisibility(View.INVISIBLE);
                 countDownTimer.start();
             }
         });
     }
 
-    private void Anhxa()
+    private void init()
     {
-
-        imPlay  =(Button) findViewById(R.id.buttonPlay);
+        btnPlay =(Button) findViewById(R.id.buttonPlay);
         cb1     =(CheckBox) findViewById(R.id.checkboxOne);
         cb2     =(CheckBox) findViewById(R.id.checkboxTwo);
         cb3     =(CheckBox) findViewById(R.id.checkboxThree);
