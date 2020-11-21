@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        Mapped();
+        init();
     }
-    protected void Mapped(){
+    protected void init(){
         tvRGB=findViewById(R.id.tvRGB);
         tvCMY=findViewById(R.id.tvCMY);
 
