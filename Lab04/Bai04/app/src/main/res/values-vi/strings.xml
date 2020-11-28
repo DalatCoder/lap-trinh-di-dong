@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lab03_Bai04</string>
+    <string name="welcome">Xin chào!</string>
+    <string name="email">Email</string>
+    <string name="password">Mật khẩu</string>
+    <string name="login">Đăng nhập</string>
+    <string name="do_not_have_account">Không có tài khoản? Đăng ký ngay</string>
+</resources>
