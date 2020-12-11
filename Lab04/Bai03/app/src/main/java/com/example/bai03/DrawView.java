@@ -22,7 +22,6 @@ public class DrawView extends View {
     float mStartX = 0f;
     float mStartY = 0f;
 
-
     public DrawView(Context context) {
         super(context);
     }
