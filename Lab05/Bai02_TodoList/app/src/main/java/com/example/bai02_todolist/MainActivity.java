@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     DatabaseHelper databaseHelper;
 
+    TextView txtSLCongViec;
     ListView lvCongViec;
     ArrayList<CongViec> arrayCongViec;
     CongViecAdapter adapter;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        txtSLCongViec = (TextView) findViewById(R.id.textviewSLGhiChu);
         lvCongViec = (ListView) findViewById(R.id.listviewCongViec);
         arrayCongViec = new ArrayList<CongViec>();
 
@@ -114,6 +116,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void GetDataCongViec() {
+        Cursor SLCongViec = databaseHelper.GetData("SELECT COUNT(*) FROM CongViec");
+        txtSLCongViec.setText("Số lượng công việc hiện tại: 0");
+
+        while (SLCongViec.moveToNext()) {
+            int soLuong = SLCongViec.getInt(0);
+            txtSLCongViec.setText("Số lượng công việc hiện tại: " + String.valueOf(soLuong));
+        }
+
         arrayCongViec.clear();
 
         // Select data
