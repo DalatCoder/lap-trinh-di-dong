@@ -24,7 +24,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase database = this.getReadableDatabase();
         return database.rawQuery(query, null);
     }
-    
+
     @Override
     public void onCreate(SQLiteDatabase db) {
 
