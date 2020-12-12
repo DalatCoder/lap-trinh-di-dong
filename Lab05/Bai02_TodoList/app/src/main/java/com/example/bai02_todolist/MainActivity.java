@@ -50,6 +50,43 @@ public class MainActivity extends AppCompatActivity {
         GetDataCongViec();
     }
 
+    public void DialogSua(CongViec congViecHienTai) {
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_sua_cong_viec);
+
+        EditText tenCV = (EditText) dialog.findViewById(R.id.edittextSuaTenCV);
+        Button btnSuaCV = (Button) dialog.findViewById(R.id.buttonSuaCV);
+        Button btnHuy = (Button) dialog.findViewById(R.id.buttonThoatSuaCV);
+
+        tenCV.setText(congViecHienTai.getTen());
+
+        btnSuaCV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String tenCVEdit = tenCV.getText().toString().trim();
+                if (tenCVEdit.length() == 0) {
+                    Toast.makeText(MainActivity.this, "Vui lòng nhập tên công việc mới", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                databaseHelper.QueryData("UPDATE CongViec SET TenCV = '" + tenCVEdit + "' WHERE Id = '" + congViecHienTai.getId() + "'");
+                Toast.makeText(MainActivity.this, "Cập nhật công việc thành công", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+                GetDataCongViec();
+            }
+        });
+
+        btnHuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
     private void GetDataCongViec() {
         arrayCongViec.clear();
 

@@ -7,16 +7,17 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
 public class CongViecAdapter extends BaseAdapter {
 
-    private Context context;
+    private MainActivity context;
     private int layout;
     private List<CongViec> congViecList;
 
-    public CongViecAdapter(Context context, int layout, List<CongViec> congViecList) {
+    public CongViecAdapter(MainActivity context, int layout, List<CongViec> congViecList) {
         this.context = context;
         this.layout = layout;
         this.congViecList = congViecList;
@@ -58,9 +59,16 @@ public class CongViecAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        CongViec congViec = congViecList.get(position);
+        final CongViec congViec = congViecList.get(position);
 
         holder.txtTen.setText(congViec.getTen());
+
+        holder.imgEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.DialogSua(congViec);
+            }
+        });
 
         return convertView;
     }
