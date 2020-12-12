@@ -3,7 +3,9 @@ package com.example.bai02_todolist;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
@@ -48,6 +50,30 @@ public class MainActivity extends AppCompatActivity {
         // databaseHelper.QueryData("INSERT INTO CongViec(TenCV) VALUES ('Làm bài tập android')");
 
         GetDataCongViec();
+    }
+
+    public void DialogXoa(CongViec congViec) {
+        AlertDialog.Builder dialogXoa = new AlertDialog.Builder(this);
+        dialogXoa.setMessage("Bạn có muốn xóa công việc này không? " + congViec.getTen());
+
+        dialogXoa.setPositiveButton("Xóa", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                databaseHelper.QueryData("DELETE FROM CongViec WHERE Id = '" + congViec.getId() + "'");
+                Toast.makeText(MainActivity.this, "Đã xóa công việc", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+                GetDataCongViec();
+            }
+        });
+
+        dialogXoa.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        dialogXoa.show();
     }
 
     public void DialogSua(CongViec congViecHienTai) {

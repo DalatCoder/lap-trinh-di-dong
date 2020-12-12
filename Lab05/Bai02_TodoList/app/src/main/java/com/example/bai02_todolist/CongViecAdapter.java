@@ -70,6 +70,13 @@ public class CongViecAdapter extends BaseAdapter {
             }
         });
 
+        holder.imgDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.DialogXoa(congViec);
+            }
+        });
+
         return convertView;
     }
 }
