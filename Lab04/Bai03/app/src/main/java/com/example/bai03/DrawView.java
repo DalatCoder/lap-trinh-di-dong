@@ -24,10 +24,12 @@ public class DrawView extends View {
 
     public DrawView(Context context) {
         super(context);
+        init();
     }
 
     public DrawView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     void init() {
@@ -69,7 +71,7 @@ public class DrawView extends View {
     }
 
     void actionMove(float x, float y) {
-        mPath.quadTo(mCurX, mCurY, (x + mCurY) / 2, (y + mCurY) / 2);
+        mPath.quadTo(mCurX, mCurY, (x + mCurX) / 2, (y + mCurY) / 2);
         mCurX = x;
         mCurY = y;
     }
@@ -87,7 +89,6 @@ public class DrawView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        init();
 
         canvas.drawPath(mPath, mPaint);
     }
