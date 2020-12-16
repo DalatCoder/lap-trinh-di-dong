@@ -49,16 +49,17 @@ public class DrawView extends View {
                 mStartX = x;
                 mStartY = y;
                 actionDown(x, y);
-                return true;
+                break;
             case MotionEvent.ACTION_MOVE:
                 actionMove(x, y);
-                return true;
+                break;
             case MotionEvent.ACTION_UP:
                 actionUp();
-                return true;
+                break;
         }
 
-        return false;
+        invalidate();
+        return true;
     }
 
     void actionDown(float x, float y) {
